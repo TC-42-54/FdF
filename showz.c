@@ -14,11 +14,11 @@ int showz4x(int x, int y, int z)
   rotz = ((2 * M_PI) / 15.65);
   coordx = ((x * cos(rotz)) - (y * sin(rotz)));
   coordx = ((coordx * cos(roty)) + ((z) * sin(roty)));
-  ft_putendl("//////////////");
+  /*ft_putendl("//////////////");
   ft_putstr("x : ");
   ft_putnbr((int)coordx);
   ft_putchar('\n');
-  ft_putendl("//////////////");
+  ft_putendl("//////////////");*/
   return ((int)coordx);
 }
 
@@ -36,10 +36,10 @@ int showz4y(int x, int y, int z)
   rotz = ((2 * M_PI) / 13.65);
   coordy = ((x * sin(rotz)) + (y * cos(rotz)));
   coordy = ((coordy * cos(rotx)) - ((z) * sin(rotx)));
-  ft_putendl("//////////////");
+  /*ft_putendl("//////////////");
   ft_putstr("y : ");
   ft_putnbr((int)coordy);
   ft_putchar('\n');
-  ft_putendl("//////////////");
+  ft_putendl("//////////////");*/
   return ((int)coordy);
 }

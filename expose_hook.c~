@@ -17,11 +17,11 @@ int expose_hook(t_env *e)
   int status;
   int x;
   int y;
-
-  ft_putendl("we are in expose hook");
+  
   x = ((e->res)[0] / 10);
   y = ((e->res)[1] / 10);
   status = 0;
+  ft_putendl("we entered in expose_hook.");
   trace_map(e, x, y);
   status = mlx_put_image_to_window(e->mlx, e->win, e->img, 0, 0);
   e->mlx = e->mlx;
