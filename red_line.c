@@ -6,7 +6,7 @@
 /*   By: tchezier <tchezier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/06 19:50:48 by tchezier          #+#    #+#             */
-/*   Updated: 2015/06/08 20:29:57 by tchezier         ###   ########.fr       */
+/*   Updated: 2015/06/09 17:17:39 by tchezier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ int v_red_line(t_env *e, int x1, int y1, int **var)
   coords[2] = showz4x(x1, y2, (e->zval)[(*var)[0] + 1][(*var)[1]]); //x2
   coords[3] = showz4y(x1, y2, (e->zval)[(*var)[0] + 1][(*var)[1]]); //y2
   sub_red_line(e, coords, (e->zval)[(*var)[0]][(*var)[1] + 1]);
+  free(coords);
   return (0);
 }
 
@@ -99,5 +100,6 @@ int h_red_line(t_env *e, int x1, int y1, int **var)
   coords[2] = showz4x(x2, y1, (e->zval)[(*var)[0]][(*var)[1] + 1]); //x2
   coords[3] = showz4y(x2, y1, (e->zval)[(*var)[0]][(*var)[1] + 1]); //y2
   sub_red_line(e, coords, (e->zval)[(*var)[0]][(*var)[1] + 1]);
+  free(coords);
   return (0);
 }

@@ -14,6 +14,7 @@ void trace_map(t_env *e, int x, int y)
 
     while ((e->zval)[(var)[0]] != NULL)
       sub_trace_map(e, &(var), x, y);
+	free(var);
 }
 
 void sub_trace_map(t_env *e, int **var, int x, int y)

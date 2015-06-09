@@ -6,7 +6,7 @@
 /*   By: tchezier <tchezier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/06 15:23:11 by tchezier          #+#    #+#             */
-/*   Updated: 2015/04/07 11:08:24 by tchezier         ###   ########.fr       */
+/*   Updated: 2015/06/09 16:34:07 by tchezier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int		*getz(char *line, int *zval, int *nbcases)
 	cases = 0;
 	len = 0;
 	*nbcases = 0;
-	ft_putendl("/////////////");
+	/*ft_putendl("/////////////");
 	ft_putstr("line : ");
 	ft_putendl(line);
-	ft_putendl("/////////////");
+	ft_putendl("/////////////");*/
 	linesplit = ft_strsplit(line, ' ');
 	ft_putendl("the split was did.");
 	len = tablen((void **)linesplit);

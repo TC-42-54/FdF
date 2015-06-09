@@ -6,7 +6,7 @@
 /*   By: tchezier <tchezier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/06 14:59:46 by tchezier          #+#    #+#             */
-/*   Updated: 2015/04/07 11:07:17 by tchezier         ###   ########.fr       */
+/*   Updated: 2015/06/09 16:28:01 by tchezier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,22 @@
 
 typedef struct s_env
 {
-  void		*mlx;
-  void		*win;
-  void		*img;
-  char		*addr;
-  size_t	res[2];
-  int		**zval;
-  int		*nbcases;
-  int		bpp;
-  int		sizeline;
-  int		endian;
-  int		taille;
-  int		line;
-  int		cases;
-  int		x;
-  int		y;
+	void		*mlx;
+	void		*win;
+	void		*img;
+	char		*addr;
+	size_t	res[2];
+	size_t	len;
+	int		**zval;
+	int		*nbcases;
+	int		bpp;
+	int		sizeline;
+	int		endian;
+	int		taille;
+	int		line;
+	int		cases;
+	int		x;
+	int		y;
 }				t_env;
 
 void	trace_map(t_env *e, int x, int y);

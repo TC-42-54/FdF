@@ -9,7 +9,7 @@ void final_h_blue_line(t_env *e, int *coords)
   start = coords[0];
   while (start <= coords[2])
   {
-    if ((start < (int)(e->res[1])) && (start >= 0))
+    if ((start < (int)(e->res[0])) && (start >= 0))
     {
 	snd = coords[1] + (((coords[3] - coords[1]) *
 			    (start - coords[0])) / (coords[2] - coords[0]));
@@ -58,6 +58,7 @@ int v_blue_line(t_env *e, int x1, int y1, int **var)
   coords[2] = showz4x(x1, y2, (e->zval)[(*var)[0] + 1][(*var)[1]]); //x2
   coords[3] = showz4y(x1, y2, (e->zval)[(*var)[0] + 1][(*var)[1]]); //y2
   sub_blue_line(e, coords);
+  free(coords);
   return(0);
 }
 
@@ -73,5 +74,6 @@ int h_blue_line(t_env *e, int x1, int y1, int **var)
   coords[2] = showz4x(x2, y1, (e->zval)[(*var)[0]][(*var)[1] + 1]); //x2
   coords[3] = showz4y(x2, y1, (e->zval)[(*var)[0]][(*var)[1] + 1]); //y2
   sub_blue_line(e, coords);
+  free(coords);
   return(0);
 }
