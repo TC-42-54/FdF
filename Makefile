@@ -6,7 +6,7 @@
 #    By: tchezier <tchezier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/04/06 16:20:15 by tchezier          #+#    #+#              #
-#    Updated: 2015/04/07 10:34:34 by tchezier         ###   ########.fr        #
+#    Updated: 2015/06/09 15:57:21 by tchezier         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -69,7 +69,7 @@ $(NAME):
 			@make -C ./minilibx_macos/ re
 			@make -C ./libft/ re
 			gcc $(WFLAGS) -I $(GNLH) -I $(FDFH) -I $(LIBFTH) -I $(MLXH) -c $(SRC)
-			gcc -g $(FWK) $(WFLAGS) -L ./libft/ -L ./minilibx_macos/ -I $(GNLH) -I $(FDFH) -I $(LIBFTH) -I $(MLXH) -lft -lm -lmlx $(OBJ) -o $(NAME)
+			gcc $(FWK) $(WFLAGS) -L ./libft/ -L ./minilibx_macos/ -I $(GNLH) -I $(FDFH) -I $(LIBFTH) -I $(MLXH) -lft -lm -lmlx $(OBJ) -o $(NAME)
 
 clean: 
 			rm -rf $(OBJ)
